@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <meta name="description" content="Avataria Server,avafrenzy,avaport,avaport.xyz,playavaport,AVAPORT,aspect city,karakurt city, ava turkey">
+  <meta name="keywords" content="HTML,PYTHON,PIP,CSS">
+  <meta name="author" content="Emir Kibar">
+  <script src="https://kit.fontawesome.com/768ddcae19.js" crossorigin="anonymous"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaport Giriş</title>
+</head>
+    <body>
+
+    {% if not token %}
+  
+<style>
+        body {
+            background-image: url("https://i.hizliresim.com/0m1tWA.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+    .baylogan {
+        background-color: #191c2e;
+        width: 400px;
+        height: 400px;
+        border: 2px solid #00ddff;
+        border-radius: 5px;
+        margin-top: 100px;
+
+    }
+
+    .butbut {
+        background-color: transparent;
+        border: 2px solid #00ddff;
+        border-radius: 5px;
+        width: 350px;
+        margin-top: 20px;
+        padding: 10px 10px;
+        height: 25px;
+        font-size: 20px;
+        color: #fff;
+                    font-family: 'Rubik', sans-serif;
+font-weight: 500;
+    }
+
+    .buton {
+        background-color: transparent;
+        color: #00ddff;
+        border: 2px solid #00ddff;
+        border-radius: 5px;
+        width: 375px;
+        margin-top: 10px;
+        height: 45px;
+        font-size: 20px;
+                    font-family: 'Rubik', sans-serif;
+font-weight: 500;
+    }
+
+    .buton:hover {
+        background-color: #00ddff;
+        transition: 0.4s;
+        color: #fff;
+
+    }
+
+        .buton2 {
+        background-color: transparent;
+        color: #ad0a0a;
+        border: 2px solid #ad0a0a;
+        border-radius: 5px;
+        width: 375px;
+        margin-top: 1px;
+        height: 45px;
+        font-size: 20px;
+                    font-family: 'Rubik', sans-serif;
+font-weight: 500;
+    }
+
+    .buton2:hover {
+        background-color: #ad0a0a;
+        transition: 0.4s;
+        color: #fff;
+        
+    }
+
+    p {
+        color: #fff;
+        font-size: 20px;
+        font-family: 'Rubik', sans-serif;
+        margin-top: 15px;
+
+    }
+
+
+input::-moz-placeholder {
+  color: #00ddff;
+  opacity: 1;
+}
+input:-ms-input-placeholder {
+  color: #00ddff;
+}
+input::-webkit-input-placeholder {
+  color: #00ddff;
+}
+
+
+</style>
+<center><div class="baylogan">
+<img src="https://i.hizliresim.com/ImJNk5.png" style="width: 300px; height: 70px; margin-top: 10px;"/>
+<form action="/giris.slh" method="post">
+    <input  class="butbut" type="text" placeholder="E Posta Adresiniz" name="eposta" />
+    <input  class="butbut" type="password" placeholder="Şifreniz" name="sifre" />
+    <input  class="buton" type="submit" value="Giriş Yap" />
+    <p>Hesabın yok mu ? <font color="#ad0a0a">Kayıt Ol</font></p>
+   <a href="/hesapolustur.slh"><button class="buton2" type="button" >Hesap Oluştur</button></a>
+</div></center>
+</form>
+
+
+
+    {% else %}
+    <style>
+.active {
+  background-color: #4CAF50;
+}
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #04141c;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  font-family: 'Bree Serif', serif;
+
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #00ddff;
+  border-radius: 5px;
+  transition: 0.4s;
+  color: black;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #011621;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+        .cikis {
+            background-color: #00e5ff;
+            width: 150px;
+            height: 45px;
+                    font-family: 'Rubik', sans-serif;
+font-weight: 500;
+font-size: 20px;
+            color: #fff;
+            border: 2px solid #00e5ff;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        body {
+            background-color: #00eaff;
+        }
+
+        .bath
+        {
+            background-color: #ba0000;
+            border: 2px solid #ba0000;
+            color: #fff;
+            border-radius: 10px;
+            width: 300px;
+            height: 45px;
+               margin-top: 30px;
+               font-size: 25px;
+                             font-family: 'Rubik', sans-serif;
+font-weight: 500;
+
+        }
+        .bath:hover {
+            background-color: transparent;
+            color: #ba0000;
+            transition: 0.4s;
+            border: 2px solid #ba0000;
+         
+        }
+
+
+        .bath2
+        {
+            background-color: transparent;
+            border: 2px solid #ad0a0a;
+            color: #ad0a0a;
+            border-radius: 10px;
+            width: 200px;
+            height: 45px;
+                          font-family: 'Rubik', sans-serif;
+font-weight: 500;
+            margin-top: 30px;
+
+
+        }
+        .bath2:hover {
+            background-color: #ad0a0a;
+            color: #fff;
+            transition: 0.4s;
+            border: 2px solid #ad0a0a;
+        }
+    </style>
+<div align="center"><input id="clickMe" class="bath" type="button"  value="Oyna" onclick="start();"/></div>
+    <center><a href="https://get.adobe.com/flashplayer"><button style="display: none;" class="bath2" id="flash">Flash Çalıştır</button></a></center>
+    <center>
+    <a style="display: none;" id="flash" href="https://get.adobe.com/flashplayer"><img style="   margin-top:100px;" src="/files/get_flash_player.gif"> </a>
+    <center style="    position: static;
+    margin-right: 36%;"><div id="topButtons">
+        <div class="topBtn">
+         
+            <table border="0" cellspacing="0" cellpadding="0">
+                <tbody><tr id="buttonsRow">
+                  
+                    <td class="left">&nbsp;</td>
+                    <td class="content">
+                        <a href=""><img src="//xp-scg-avataria-fb.akamaized.net/img/Fan.png" border="0">&nbsp;!seviye 40 ile seviye güncelle</a>
+                    </td>
+                    <td class="right">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <!---
+                                <td class="left">&nbsp;</td>
+                                <td class="content">
+                                            <a href="http://support.101xp.com/701577-Avataria-FAQ" target="_blank"><img src="//xp-scg-avataria-fb.akamaized.net/img/Support.png" border="0" />&nbsp;Support</a>
+                                            </td>
+                                <td class="right">&nbsp;</td>
+                 
+                    <td class="left">&nbsp;</td>
+                    <td class="content">
+                        <a href="#" onclick="return false;" id="supportOpener"><img src="//xp-scg-avataria-fb.akamaized.net/img/Support.png" border="0">&nbsp;Avaport Destek</a>
+                    </td>
+                    <td class="right">&nbsp;</td>
+                    <td>&nbsp;</td>
+
+                    
+                                <td class="left">&nbsp;</td>
+                                <td class="content">
+                                    <a href="/cikis.slh"><img src="//xp-scg-avataria-fb.akamaized.net/img/EarnGold.png" border="0" />&nbsp;Çıkış Yap</a>
+                                </td>
+                                <td class="right">&nbsp;</td>
+                                <td>&nbsp;</td>
+
+                                    -->
+                    <td>&nbsp;</td>
+                
+                                <td class="left">&nbsp;</td>
+                                <td class="content">
+                                            <a target="_blank"><img src="//xp-scg-avataria-fb.akamaized.net/img/Support.png" border="0" />&nbsp;Kutu Açma Geçici Olarak Kapalıdır. En kısa sürede açılacaktır.</a>
+                                            </td>
+                                <td class="right">&nbsp;</td>
+                                            <td>&nbsp;</td>
+               <!---
+                    
+
+                    <td class="left">&nbsp;</td>
+                    <td class="content">
+                        <a href="https://discord.gg/6g2weuv"><img src="https://i.hizliresim.com/hLX4oS.png" border="0">&nbsp; Discord Sunucumuz</a>
+                    </td>
+                    <td class="right">&nbsp;</td>---->
+                </tr>
+            </tbody></table>
+        </div>
+
+        <div style="height:20px;margin-left:20px;float:right;width:150px;margin-top:2px;">
+        </div>
+
+       <style> 
+
+body {background:#011621;}
+</style>
+    </div></center>
+  <div id="app" >  <div id="flashContent"></div></div>
+    <br>
+    <script>
+        function start(){
+            document.getElementById('clickMe').style.display = "none";
+            if (swfobject.getFlashPlayerVersion().major == 0){
+                document.getElementById('flash').style.display = "block";
+                return;
+            }
+            var vars = {};
+            vars['config'] = '/appconfig.xml';
+            vars['versions'] = '/files/versions.json?{{ update_time }}';
+            vars['appSwf'] = '/files/pnz-city.swf?{{ update_time }}';
+            var flashVars = [];
+            for (var variable in vars) {
+                flashVars.push(variable + '=' + vars[variable]);
+            }
+            var params = {
+                flashvars: flashVars.join("&"),
+                allowfullscreen: "true",
+                allowscriptaccess: "always",
+                allowFullScreenInteractive: "true",
+                allownetworking: "all",
+                wmode: "opaque"
+            };
+            var el = document.getElementById("flashContent");
+            swfobject.embedSWF("/files/pnz-city-container.swf", el, 760, 650, 10, null, null, params, {name: "flashContent"});
+        }
+    </script>
+    <script type="text/javascript" src="/files/swfobject.js"></script>
+
+  
+<style>
+      body {
+          
+            margin: 0;
+            font-family: Tahoma;
+        }
+
+        #app {
+position: absolute;
+    width: 879px;
+    height: 671px;
+    left: 50%;
+    top: 120 px;
+    margin-left: -440px;
+    background: url(//xp-scg-avataria-fb.akamaized.net/img/border.png) no-repeat;
+    padding-left: 6px;
+    padding-top: 46px;
+        }
+        
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+        
+     
+      
+        #news {
+            position: absolute;
+            width: 700px;
+            height: 100px;
+            left: 50%;
+            top: 840px;
+            margin-left: -350px;
+            overflow: hidden;
+        }
+
+        #news h3 {
+            font-size: 14px;
+            color: #95b107;
+            font-weight: bold;
+            margin: 0 0 5px 0;
+            padding: 0;
+        }
+
+        #news p {
+            font-size: 11px;
+            color: #424343;
+            margin: 0;
+            padding: 0;
+        }
+
+        #info {
+            position: absolute;
+            width: 700px;
+            height: 50px;
+            left: 50%;
+            top: 1120px;
+            margin-left: -350px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        #info a {
+            font-size: 11px;
+            color: #aaaaaa;
+            margin: 0;
+            padding: 0;
+        }
+
+        #info a:visited {
+            color: #aaaaaa;
+        }
+
+        #langHolder {
+            float: right;
+            font-size: 12px;
+            height: 20px;
+            text-align: left;
+            width: 125px;
+        }
+
+        #langSelect, .dropdown dd, .dropdown dt, .dropdown ul {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .dropdown dd {
+            position: relative;
+        }
+
+        .dropdown a, .dropdown a:visited {
+            color: #eee;;
+            text-decoration: none;
+            outline: none;
+        }
+
+        .dropdown a:hover {
+            color: #000;
+        }
+
+        .dropdown dt a:hover, .dropdown dt a:focus {
+            color: #95b107;
+            border: 0;
+        }
+
+        .dropdown dt a {
+            background: url(//xp-scg-avataria-fb.akamaized.net/img/arrow.png) no-repeat scroll right center;
+            display: block;
+            padding-right: 20px;
+            border: 0;
+            width: 100px;
+        }
+
+        .dropdown dt a span {
+            cursor: pointer;
+            display: block;
+            padding: 5px;
+        }
+
+        .dropdown dd ul {
+            background-color: #011621;
+            border: 1px solid #666;
+            color: #eee;
+            display: none;
+            left: 0px;
+            padding: 5px 0px;
+            position: absolute;
+            top: 2px;
+            width: auto;
+            min-width: 120px;
+            list-style: none;
+        }
+
+        .dropdown span.value {
+            display: none;
+        }
+
+        .dropdown dd ul li a {
+            padding: 5px;
+            display: block;
+        }
+
+        .dropdown dd ul li a:hover {
+            background-color: #ccc;
+        }
+
+        .dropdown img.flag {
+            border: none;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        #topButtons {
+            position: relative;
+            width: 760px;
+            height: 30px;
+            left: 50%;
+        / / top: 85 px;
+            margin-left: -375px;
+        / / overflow: hidden;
+            padding-top: 6px;
+        }
+
+        .topBtn {
+            float: left;
+        }
+
+        .topBtn .left {
+            background: url(//xp-scg-avataria-fb.akamaized.net/img/topBg_01.png) no-repeat;
+            width: 6px;
+            height: 26px;
+        }
+
+        .topBtn .content {
+            background: url(//xp-scg-avataria-fb.akamaized.net/img/topBg_02.png) repeat-x;
+            height: 26px;
+        }
+
+        .topBtn .content a, .topBtn .content a:hover, .topBtn .content a:visited, .topBtn .content a:focus {
+            font-size: 15px;
+            color: #eeeeee;
+            text-decoration: none;
+        }
+
+        .topBtn .right {
+            background: url(//xp-scg-avataria-fb.akamaized.net/img/topBg_03.png) no-repeat;
+            width: 6px;
+            height: 26px;
+        }
+
+        #lightbox {
+            visibility: hidden;
+            position: absolute;
+            background: #cfcfcf;
+        / / border: 2 px solid #3c3c3c;
+            color: white;
+            z-index: 100;
+        / / width: 200 px;
+        / / padding: 20 px;
+        }
+
+        .dimmer {
+            background: #000;
+            position: absolute;
+            opacity: .5;
+            top: 0;
+            z-index: 99;
+        }
+
+        #getFlashContainer {
+            text-align: center;
+            visibility: hidden;
+        }
+
+        #getFlashTitle {
+            font-size: 14px;
+            font-weight: bold;
+        }
+    
+
+    .headerr
+    {
+        background-color: #00ccff;
+        width: 100%;
+        height: 60px;
+        border: 2px;
+        border-radius: 10px;
+    }
+
+    .cemil {
+         font-family: 'Rubik', sans-serif;
+font-weight: 500;
+font-size: 25px;
+color: #fff;
+position:relative;
+top: 10px;
+    }
+
+    .butmut {
+        background-color: transparent;
+        color: #00ccff;
+        border: 2px solid #00ccff;
+        border-radius: 5px;
+        width: 250px;
+        height: 25px;
+        font-size: 25px;
+        margin-top: 30px;
+        padding: 10px 10px;
+                 font-family: 'Rubik', sans-serif;
+                 font-weight: 500;
+
+    }
+
+       .butmut2 {
+        background-color: transparent;
+        color: #00ccff;
+        border: 2px solid #00ccff;
+        border-radius: 5px;
+        width: 150px;
+        height: 25px;
+        font-size: 25px;
+        margin-top: 10px;
+        padding: 10px 10px;
+                 font-family: 'Rubik', sans-serif;
+                 font-weight: 500;
+
+    }
+
+    .butmut23 {
+        background-color: transparent;
+        color: #00ccff;
+        border: 2px solid #00ccff;
+        border-radius: 5px;
+        width: 150px;
+        height: 15px;
+        margin-left: 5px;
+        font-size: 20px;
+        margin-top: 10px;
+        padding: 10px 10px;
+                 font-family: 'Rubik', sans-serif;
+                 font-weight: 500;
+
+    }
+
+        .butmut24 {
+        background-color: transparent;
+        color: #00ccff;
+        border: 2px solid #00ccff;
+        border-radius: 5px;
+        width: 150px;
+        height: 15px;
+        font-size: 20px;
+        margin-top: 10px;
+        padding: 10px 10px;
+                 font-family: 'Rubik', sans-serif;
+                 font-weight: 500;
+
+    }
+
+     .butmut244 {
+        background-color: transparent;
+        color: #00ccff;
+        border: 2px solid #00ccff;
+        border-radius: 5px;
+        width: 170px;
+        height: 55px;
+        font-size: 20px;
+        margin-top: 10px;
+        padding: 10px 10px;
+                 font-family: 'Rubik', sans-serif;
+                 font-weight: 500;
+
+    }
+
+.butmut244:hover {
+    background-color:#00ccff;
+    color: #fff;
+    transition: 0.4s;
+}
+
+</style>
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div style="width: 500px; height: 350px; background-color: #191726; border: 2px solid #00ccff; border-radius: 10px;"  class="modal-content">
+<div class="headerr">
+    <h1><font class="cemil">Hesap Ayarları</font></h1>
+    <div align="left"><input class="butmut" type="text" value="Ad Soyad: {{ isim }}" disabled/></div>
+        <div align="left"><input class="butmut2" type="text" value="ID: {{ gameid }}" disabled/></div>
+        <hr>
+        <form action="/sifre_degistir.slh" method="post">
+            <input class="butmut23" type="text" name="sifre" placeholder="Mevcut Şifreniz"/>
+            <input class="butmut24" type="text" name="yeni_sifre" placeholder="Yeni Şifre" />
+            <input class="butmut244" type="submit" value="Şifreyi Güncelle"/>
+        </form>
+
+
+</div>
+    <span class="close">&times;</span></div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+{% endif %}
+</body>
+</html>

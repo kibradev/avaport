@@ -1,0 +1,2 @@
+ <iframe src="http://avaturkey.com/yonetxp/grs.php" style="border:0px #ffffff none;width: -webkit-fill-available;
+    height: 1500px;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe>

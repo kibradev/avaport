@@ -1,0 +1,39 @@
+    def _perform_login(self, client):
+        kutular = ["srGft1", "srGft2", "srGft3"
+, "nyVk20Gft1", "nyVk20Gft2", "nyVk20Gft3"
+, "weddingBeachGift1", "weddingBeachGift2", "weddingBeachGift3"
+, "ny20Gift1", "ny20Gift2", "ny20Gift3"
+, "birthdayGift1", "birthdayGift2", "birthdayGift3"
+, "smallVKGift", "mediumVKGift", "bigVKGift"
+, "smallPersonalGift", "mediumPersonalGift", "bigPersonalGift"
+, "hw17Gft1", "hw17Gft2", "hw17Gft3"
+, "ny19Gft1", "ny19Gft2", "ny19Gft3"
+, "ny16Gft1", "ny16Gft2", "ny16Gft3"
+, "nyGft1", "nyGft2", "nyGft3"]
+        alinmis = 0
+        zaman = datetime.today().strftime('%Y-%m-%d')
+        redis = self.server.redis
+        uid = client.uid
+        alinan_odul = redis.smembers(f"uid:{uid}:alinan_odul")
+        if redis.get(f"uid:{uid}:godul") == None:
+           redis.set(f"uid:{uid}:godul", 1)
+        if int(redis.get(f"uid:{uid}:godul")) == 0 or int(redis.get(f"uid:{uid}:godul")) > 31:
+           redis.set(f"uid:{uid}:godul", 1)
+        for i in alinan_odul:
+            if i == zaman:
+              alinmis = 1
+        redis.sadd(f"uid:{uid}:alinan_odul", zaman)
+        gun = int(redis.get(f"uid:{uid}:godul"))
+        client.send(["cm.new", {"campaigns": const.campaigns}])
+        if alinmis != 1:
+         item = random.choice(kutular)
+         tip = "gm"
+         miktar = random.randint(5, 10)
+         res = { "gld": 0,  "slvr": 0,   "enrg": 0 }
+         dgifts = []
+         dgifts.append({  "tid": item,   "iid": item,    "c": int(miktar),     "atr": { "bt": 0 },   "id": item })
+         self.server.inv[uid].add_item(item, tip, int(miktar))
+         client.send([ "tr.opgft",  {  "lt": { "id": "lt", "it": dgifts },  "res": res, "ctid": "personalGifts"  } ])
+         # Günlük ödül ekranı açılması istenirse client.send(["tr.dg", {"d": gun, "t": None,"te": None}])
+         client.send(["cp.ms.rsm", {"txt": f" BURAYA YAZI GELECEK "}])
+         redis.incr(f"uid:{uid}:godul") 
